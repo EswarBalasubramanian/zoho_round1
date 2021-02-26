@@ -9,7 +9,16 @@ int main()
     int middle = size / 2;
     for (int i = 0; i < size; i++)
     {
-        int temp = i + 1, print = middle;
+        int temp = size - (i + 1), print = middle;
+
+        while (temp)
+        {
+            cout << " ";
+            temp--;
+        }
+
+        temp = i + 1;
+
         while (temp)
         {
             print = print % size;
@@ -17,6 +26,7 @@ int main()
             print++;
             temp--;
         }
+
         cout << endl;
     }
     return 0;
